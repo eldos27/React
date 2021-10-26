@@ -1,28 +1,13 @@
-import React, { useState } from "react";
-import Input from "./components/Input/Input";
-import View from "./components/View/View";
+import "./styles.css";
+
+import ContactList from "./components/ContactList/ContactList";
 
 function App() {
-  const [todos, setTodos] = useState([]);
-  function addTask(task) {
-    let obj = {
-      title: task,
-      id: Date.now(),
-    };
-    let todosArr = [...todos, obj];
-    setTodos(todosArr);
-  }
-  function deleteTask(id) {
-    let newArr = todos.filter((item) => {
-      return item.id !== id;
-    });
-    setTodos(newArr);
-  }
   return (
-    <>
-      <Input addTask={addTask} />
-      <View todos={todos} deleteTask={deleteTask} />
-    </>
+    <div className="mainDiv">
+      <h1>Contacts</h1>
+      <ContactList />
+    </div>
   );
 }
 
