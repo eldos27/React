@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Button from "./components/Button/Button";
 import Input from "./components/Input/Input";
 import View from "./components/View/View";
 
@@ -13,12 +12,16 @@ function App() {
     let todosArr = [...todos, obj];
     setTodos(todosArr);
   }
-  console.log(todos);
+  function deleteTask(id) {
+    let newArr = todos.filter((item) => {
+      return item.id !== id;
+    });
+    setTodos(newArr);
+  }
   return (
     <>
       <Input addTask={addTask} />
-      <Button />
-      <View todos={todos} />
+      <View todos={todos} deleteTask={deleteTask} />
     </>
   );
 }
