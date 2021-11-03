@@ -1,0 +1,20 @@
+{
+  "products": [
+    {
+      "art": "12-221-33",
+      "price": "2000",
+      "size": "xl",
+      "color": "black",
+      "type": "evening",
+      "id": 1
+    },
+    {
+      "art": "23-323-222",
+      "price": "3600",
+      "size": "l",
+      "color": "red",
+      "type": "casual",
+      "id": 2
+    }
+  ]
+}

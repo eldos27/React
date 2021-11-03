@@ -1,12 +1,9 @@
-import "./styles.css";
-
-import ContactList from "./components/ContactList/ContactList";
+import Routes from "./Routes/Routes";
 
 function App() {
   return (
-    <div className="mainDiv">
-      <h1>Contacts</h1>
-      <ContactList />
+    <div className="App">
+      <Routes />
     </div>
   );
 }
